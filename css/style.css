@@ -434,4 +434,45 @@ button:hover {
 
 .card-content button:hover {
   background-color: #0c3f55;
+} 
+
+/* ===== FOOTER STYLES ===== */
+.footer {
+  background-color: #111;        /* Fondo oscuro */
+  color: #ccc;                   /* Texto gris claro */
+  padding: 1.5rem 1rem;          /* Espaciado interno */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;        /* En columna por defecto (móvil) */
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.footer-title {
+  color: #36a9f6;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+/* ===== Responsive para pantallas grandes ===== */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .footer-title {
+    margin-bottom: 0;
+  }
 }
