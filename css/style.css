@@ -151,60 +151,6 @@ body{
     color: #eee;
 }  
 
-a{
-  text-decoration: none;
-} 
-
-/* Estilo para el header */
-header {
-  width: 100%;
-  max-width: 1140px;
-  margin: auto;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* separa logo y menú */
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  background-color: transparent;
-  padding: 0 20px;
-}
-
-/* Estilo para el nav */
-header nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-/* Estilo para los enlaces */
-header nav a {
-  color: white;
-  margin-right: 5px;
-  padding: 5px 10px;
-  font-family: "Poppins", sans-serif;
-  font-size: 20px;
-  transition: 0.2s;
-  white-space: nowrap;
-  text-decoration: none;
-}
-
-header nav a.active,
-header nav a:hover {
-  background: #0d4048cb;
-  border-radius: 4px;
-}
-
-.logo img {
-  height: 60px;
-  width: 80px;
-  display: block;
-  margin: 15px;
-}
-
-
 @media screen and (max-width: 1024px) {
   .slider .list .item .content {
     left: 5%;
@@ -232,22 +178,6 @@ header nav a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  header nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  header nav a {
-    font-size: 16px;
-    margin: 5px;
-  }
-
   .slider .list .item .content h2 {
     font-size: 50px;
   }
@@ -298,12 +228,6 @@ header nav a:hover {
   .thumbnail .item {
     width: 80px;
     height: 120px;
-  }
-
-  .logo img {
-    height: 40px;
-    width: 60px;
-    margin: 10px;
   }
 }
 
@@ -475,4 +399,70 @@ button:hover {
   .footer-title {
     margin-bottom: 0;
   }
+} 
+
+a{
+  text-decoration: none;
+} 
+
+header {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: transparent;
+  padding: 0 20px;
 }
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+header nav a {
+  color: white;
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  transition: 0.2s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+header nav a.active,
+header nav a:hover {
+  background: #0d4048cb;
+  border-radius: 4px;
+}
+
+.logo img {
+  height: 60px;
+  width: 80px;
+  display: block;
+  margin: 15px;
+}
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav a {
+    font-size: 16px;
+    margin: 5px;
+}}   

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="css/style4.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="logo/logotipo.png" alt="">
+        </a> 
+        <nav>
+            <a href="#" class="active">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="nosotros.html">Sobre Nosotros</a>
+            <a href="contacto.html">Contactenos</a>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-header">
+            <h1>Contactanos</h1>
+            <p>¿Tienes preguntas? Nos encantaría escucharte. Llena el formulario y nos pondremos en contacto contigo pronto.</p>
+        </div>
+
+            <div>
+                <div class="success-message" id="successMessage">
+                    ✓ ¡Mensaje enviado correctamente! Nos pondremos en contacto pronto.
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono (Opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+503 XXXX XXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="¿Cuál es el asunto?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos cómo podemos ayudarte..." rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <h2 class="footer-title">Archive Clothez</h2>
+        <p class="footer-text">&copy; 2025 Archive Clothez. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="js/java5.js"></script>
+</body>
+</html>

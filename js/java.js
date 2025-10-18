@@ -1,43 +1,24 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+function openModal(title, imgSrc, description, tallas) {
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-img').src = imgSrc;
+  document.getElementById('modal-description').textContent = description;
 
-// Control de siguiente/anterior
-function moveSlide(n) {
-  showSlides(slideIndex += n);
+  const tallasSelect = document.getElementById('tallas');
+  tallasSelect.innerHTML = '';
+  tallas.forEach(talla => {
+    const option = document.createElement('option');
+    option.value = talla;
+    option.textContent = talla;
+    tallasSelect.appendChild(option);
+  });
+
+  document.getElementById('modal').style.display = 'flex'
 }
 
-// Control por puntos
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function closeModal() {
+  document.getElementById('modal').style.display = 'none'
 }
 
-function showSlides(n) {
-  let slides = document.querySelectorAll(".slide");
-  let dots = document.querySelectorAll(".dot");
-  
-  if (n > slides.length) {
-    slideIndex = 1; // Volver al inicio
-  }
-  if (n < 1) {
-    slideIndex = slides.length; // Ir al final
-  }
-  
-  // Calcular el desplazamiento necesario
-  let offset = (slideIndex - 1) * -100;
-  document.querySelector(".carousel-track").style.transform = `translateX(${offset}%)`;
-  
-  // Actualizar los puntos de navegación
-  dots.forEach(dot => dot.classList.remove("active"));
-  dots[slideIndex - 1].classList.add("active");
+function addToCart() {
+  alert('¡Producto añadido al carrito!')
 }
-
-/* OPCIONAL: Carrusel Automático (descomentar para activar) 
-
-function autoSlide() {
-  moveSlide(1); 
-  setTimeout(autoSlide, 5000); // Cambia cada 5 segundos
-}
-
-window.onload = autoSlide; // Inicia el carrusel automático al cargar
-
-*/

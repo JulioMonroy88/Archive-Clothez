@@ -5,8 +5,8 @@
 } 
 
 body {
-    background: burlywood;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: burlywood;
     color: #333;
     padding-top: 160px;
 }
@@ -40,7 +40,7 @@ header nav a {
     font-size: 21px;
     transition: 0.2s;
     text-decoration: none;
-} 
+}
 
 header nav a.active,
 header nav a:hover {
@@ -57,152 +57,16 @@ header nav a:hover {
 
 /* Navbar transparente en página principal */
 body.inicio {
-    padding-top: 120px;
+    padding-top: 160px;
 }
 
 body.inicio header {
     background-color: transparent;
 }
 
-/* ===== ABOUT SECTION STYLES ===== */
-.about-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px;
-}
-
-.about-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.about-header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 15px;
-    color: #1a1a1a;
-    font-weight: 700;
-}
-
-.about-header p {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    margin-bottom: 80px;
-}
-
-.about-text h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #1a1a1a;
-}
-
-.about-text p {
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.about-image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
-}
-
-.product-card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-.product-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 15px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-}
-
-.product-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #1a1a1a;
-}
-
-.product-card p {
-    font-size: 0.95rem;
-    color: #666;
-    line-height: 1.6;
-}
-
-.values-section {
-    background: white;
-    padding: 60px;
-    border-radius: 15px;
-    margin-top: 80px;
-}
-
-.values-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-    text-align: center;
-    color: #1a1a1a;
-}
-
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-}
-
-.value-item {
-    text-align: center;
-}
-
-.value-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 15px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-}
-
-.value-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #1a1a1a;
-}
-
-.value-item p {
-    font-size: 0.95rem;
-    color: #666;
-    line-height: 1.6;
+/* Navbar con fondo en otras páginas */
+body:not(.inicio) header {
+    background-color: transparent;
 }
 
 /* ===== CONTACT SECTION STYLES ===== */
@@ -360,7 +224,6 @@ body.inicio header {
     background-color: #111;
     color: #ccc;
     padding: 1.5rem 1rem;
-    margin-top: 60px;
 }
 
 .footer-container {
@@ -387,29 +250,8 @@ body.inicio header {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    body {
-        padding-top: 160px;
-    }
-
-    .about-header h1 {
+    .contact-header h1 {
         font-size: 2.5rem;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .about-image {
-        height: 300px;
-    }
-
-    .values-section {
-        padding: 40px 20px;
-    }
-
-    .about-section {
-        padding: 40px 20px;
     }
 
     .contact-container {
@@ -429,23 +271,14 @@ body.inicio header {
         padding: 25px;
     }
 
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-title {
-        margin-bottom: 1rem;
-    }
-
     header nav a {
-        font-size: 16px;
+        font-size: 18px;
         padding: 6px 10px;
     }
 
     .logo img {
-        height: 40px;
-        width: 60px;
+        height: 60px;
+        width: 70px;
     }
 }
 
